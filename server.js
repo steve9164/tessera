@@ -38,8 +38,8 @@ module.exports = function(opts, callback) {
   if (opts.uri) {
     app.use(responseTime());
     app.use(cors());
-    app.use(express.static(path.join(__dirname, "public")));
-    app.use(express.static(path.join(__dirname, "bower_components")));
+    /*app.use(express.static(path.join(__dirname, "public")));
+    app.use(express.static(path.join(__dirname, "bower_components")));*/
     app.use(serve(tilelive, opts.uri));
 
     tilelive.load(opts.uri, function(err, src) {
@@ -55,8 +55,8 @@ module.exports = function(opts, callback) {
 
         if (info.format === "pbf") {
           app.use("/_", serve(tilelive, "xray+" + opts.uri));
-          app.use("/_", express.static(path.join(__dirname, "public")));
-          app.use("/_", express.static(path.join(__dirname, "bower_components")));
+          /*app.use("/_", express.static(path.join(__dirname, "public")));
+          app.use("/_", express.static(path.join(__dirname, "bower_components")));*/
         }
       });
     });
@@ -94,8 +94,8 @@ module.exports = function(opts, callback) {
         app.use(prefix, cors());
       }
 
-      app.use(prefix, express.static(path.join(__dirname, "public")));
-      app.use(prefix, express.static(path.join(__dirname, "bower_components")));
+      /*app.use(prefix, express.static(path.join(__dirname, "public")));
+      app.use(prefix, express.static(path.join(__dirname, "bower_components")));*/
       app.use(prefix, serve(tilelive, config[prefix]));
     });
   }

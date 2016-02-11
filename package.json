@@ -10,9 +10,7 @@
     "type": "git",
     "url": "https://github.com/mojodna/tessera.git"
   },
-  "scripts": {
-    "prepublish": "npm install bower && bower install"
-  },
+  "scripts": {},
   "dependencies": {
     "abaculus": "^1.2.1",
     "cachecache": "^1.0.1",
@@ -26,7 +24,9 @@
     "response-time": "^2.2.0",
     "sphericalmercator": "^1.0.2",
     "tilelive": "^5.3.3",
-    "tilelive-cache": "^0.6.1",
+    "tilelive-bridge": "github:steve9164/tilelive-bridge",
+    "tilelive-cache": "github:steve9164/tilelive-cache",
+    "tilelive-hybrid": "github:steve9164/tilelive-hybrid",
     "tilelive-modules": "^0.2.0"
   }
 }
