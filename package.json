@@ -23,7 +23,7 @@
     "response-time": "^2.2.0",
     "sphericalmercator": "^1.0.2",
     "tilelive": "^5.3.3",
-    "tilelive-bridge": "github:steve9164/tilelive-bridge",
+    "tilelive-bridge": "^2.3.1",
     "tilelive-cache": "github:steve9164/tilelive-cache",
     "tilelive-hybrid": "github:steve9164/tilelive-hybrid",
     "tilelive-modules": "^0.2.0"
