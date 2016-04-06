@@ -12,7 +12,6 @@
   },
   "scripts": {},
   "dependencies": {
-    "abaculus": "^1.2.1",
     "cachecache": "^1.0.1",
     "clone": "^1.0.2",
     "cors": "^2.5.2",
