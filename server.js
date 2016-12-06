@@ -35,6 +35,11 @@ module.exports = function(opts, callback) {
     app.use(morgan("dev"));
   }
 
+  // Ping endpoint for AWS ELB health check
+  app.use('/ping', function(req, res){
+    res.status(200).send('OK');
+  });
+
   if (opts.uri) {
     app.use(responseTime());
     app.use(cors());
