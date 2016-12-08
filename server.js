@@ -30,9 +30,11 @@ module.exports = function(opts, callback) {
   // load and register tilelive modules
   require("tilelive-modules/loader")(tilelive, opts);
 
-  if (process.env.NODE_ENV !== "production") {
-    // TODO configurable logging per-style
+  if (process.env.NODE_ENV == "production") {
+    app.use(morgan(':remote-addr :remote-user [:date] :method :url HTTP/:http-version :status :res[content-length] - :response-time ms'));
+  } else {
     app.use(morgan("dev"));
+
   }
 
   // Ping endpoint for AWS ELB health check
